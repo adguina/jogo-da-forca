@@ -21,14 +21,45 @@ body {
   backdrop-filter: blur(222px);
   font-family: "Ubuntu", sans-serif;
 }
-#imagem {
-  background-image: url("../img/forca1.jpg");
-  width: 234px;
-  height: 272px;
-  background-repeat: no-repeat;
+.sombra {
+  width: 390px;   /* aumente à vontade */
+  height: 400px;  /* aumente à vontade */
+  background: black;
+  position: relative;
+  overflow: hidden;
 }
+
+/* camada de neblina */
+.sombra::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(200, 200, 200, 0.15) 30%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  filter: blur(35px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#imagem {
+  background-image: url("../img/forca.png");
+  width: 100%;      /* agora a imagem cresce junto */
+  height: 100%;     /* agora ocupa toda a sombra */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  z-index: 2;        /* imagem acima da neblina */
+}
+
 #palavra-secreta {
   display: flex;
+  color: #00ff00;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -117,11 +148,11 @@ body {
 }
 
 @media (min-width: 769px) {
-  #teclado .teclas button{
+  #teclado .teclas button {
     width: 68px;
     height: 68px;
     font-size: 2em;
-     margin: 3px;
+    margin: 3px;
   }
   #palavra-secreta {
     font-size: 2.5em;
