@@ -4,40 +4,40 @@ let listaDinamica = [];
 let tentativas = 6;
 
 const palavras = [
-  (palavra001 = { nome: "Brasil", categoria: "PAIS" }),
-  (palavra002 = { nome: "Peru", categoria: "PAIS" }),
-  (palavra003 = { nome: "Alemanha", categoria: "PAIS" }),
-  (palavra004 = { nome: "Bangladesh", categoria: "PAIS" }),
-  (palavra005 = { nome: "Botsuana", categoria: "PAIS" }),
-  (palavra006 = { nome: "Bielorrússia ", categoria: "PAIS" }),
-  (palavra007 = { nome: "Liechtenstein", categoria: "PAIS" }),
-  (palavra008 = { nome: "Bosnia", categoria: "PAIS" }),
-  (palavra009 = { nome: "Eslovênia", categoria: "PAIS" }),
-  (palavra010 = { nome: "Zambia", categoria: "PAIS" }),
-  (palavra011 = { nome: "Vanuatu", categoria: "PAIS" }),
-  (palavra012 = { nome: "Tuvalu", categoria: "PAIS" }),
-  (palavra013 = { nome: "Belgica", categoria: "PAIS" }),
-  (palavra014 = { nome: "Canada ", categoria: "PAIS" }),
-  (palavra015 = { nome: "Jordania", categoria: "PAIS" }),
-  (palavra016 = { nome: "Madagascar", categoria: "PAIS" }),
-  (palavra017 = { nome: "Libia", categoria: "PAIS" }),
-  (palavra018 = { nome: "Lesoto", categoria: "PAIS" }),
-  (palavra018 = { nome: "Kiribati", categoria: "PAIS" }),
-  (palavra019 = { nome: "Oma", categoria: "PAIS" }),
-  (palavra021 = { nome: "Essuatini", categoria: "PAIS" }),
-  (palavra022 = { nome: "Benim ", categoria: "PAIS" }),
-  (palavra023 = { nome: "Haiti", categoria: "PAIS" }),
-  (palavra024 = { nome: "Mocambique", categoria: "PAIS" }),
-  (palavra025 = { nome: "Braganca", categoria: "CIDADE" }),
-  (palavra026 = { nome: "Tatui", categoria: "CIDADE" }),
-  (palavra027 = { nome: "Oklahoma ", categoria: "CIDADE" }),
-  (palavra028 = { nome: "Quebec", categoria: "CIDADE" }),
-  (palavra029 = { nome: "Amsterda", categoria: "CIDADE" }),
-  (palavra030 = { nome: "Guatemala", categoria: "CIDADE" }),
-  (palavra031 = { nome: "Cubatao", categoria: "CIDADE" }),
-  (palavra032 = { nome: "Oklahoma ", categoria: "CIDADE" }),
-  (palavra033 = { nome: "Nova-Déli", categoria: "CIDADE" }),
-  (palavra034 = { nome: "Abuja", categoria: "CIDADE" }),
+  (palavra001 = { nome: "BRASIL", categoria: "PAIS" }),
+  (palavra002 = { nome: "PERU", categoria: "PAIS" }),
+  (palavra003 = { nome: "ALEMANHA", categoria: "PAIS" }),
+  (palavra004 = { nome: "BANGLADESH", categoria: "PAIS" }),
+  // (palavra005 = { nome: "Botsuana", categoria: "PAIS" }),
+  // (palavra006 = { nome: "Bielorrússia ", categoria: "PAIS" }),
+  // (palavra007 = { nome: "Liechtenstein", categoria: "PAIS" }),
+  // (palavra008 = { nome: "Bosnia", categoria: "PAIS" }),
+  // (palavra009 = { nome: "Eslovênia", categoria: "PAIS" }),
+  // (palavra010 = { nome: "Zambia", categoria: "PAIS" }),
+  // (palavra011 = { nome: "Vanuatu", categoria: "PAIS" }),
+  // (palavra012 = { nome: "Tuvalu", categoria: "PAIS" }),
+  // (palavra013 = { nome: "Belgica", categoria: "PAIS" }),
+  // (palavra014 = { nome: "Canada ", categoria: "PAIS" }),
+  // (palavra015 = { nome: "Jordania", categoria: "PAIS" }),
+  // (palavra016 = { nome: "Madagascar", categoria: "PAIS" }),
+  // (palavra017 = { nome: "Libia", categoria: "PAIS" }),
+  // (palavra018 = { nome: "Lesoto", categoria: "PAIS" }),
+  // (palavra018 = { nome: "Kiribati", categoria: "PAIS" }),
+  // (palavra019 = { nome: "Oma", categoria: "PAIS" }),
+  // (palavra021 = { nome: "Essuatini", categoria: "PAIS" }),
+  // (palavra022 = { nome: "Benim ", categoria: "PAIS" }),
+  // (palavra023 = { nome: "Haiti", categoria: "PAIS" }),
+  // (palavra024 = { nome: "Mocambique", categoria: "PAIS" }),
+  // (palavra025 = { nome: "Braganca", categoria: "CIDADE" }),
+  // (palavra026 = { nome: "Tatui", categoria: "CIDADE" }),
+  // (palavra027 = { nome: "Oklahoma ", categoria: "CIDADE" }),
+  // (palavra028 = { nome: "Quebec", categoria: "CIDADE" }),
+  // (palavra029 = { nome: "Amsterda", categoria: "CIDADE" }),
+  // (palavra030 = { nome: "Guatemala", categoria: "CIDADE" }),
+  // (palavra031 = { nome: "Cubatao", categoria: "CIDADE" }),
+  (palavra032 = { nome: "OKLAHOMA ", categoria: "CIDADE" }),
+  // (palavra033 = { nome: "Nova-Déli", categoria: "CIDADE" }),
+  // (palavra034 = { nome: "Abuja", categoria: "CIDADE" }),
 ];
 
 criarPalavraSecreta();
@@ -48,7 +48,7 @@ function criarPalavraSecreta() {
   palavraSecretaSorteada = palavras[indexPalavra].nome;
   palavraSecretaCategoria = palavras[indexPalavra].categoria;
 
-  console.log(indexPalavra);
+  // console.log(indexPalavra);
 }
 
 montarPalavraTela();
@@ -80,6 +80,8 @@ function montarPalavraTela() {
 
 // muda a cor das letras escolhidas
 function verificaLetraEscolhida(letra) {
+  document.getElementById("tecla-" + letra).disabled = true;
+
   if (tentativas > 0) {
     mudarStyleLetra("tecla-" + letra);
     comparaListas(letra);
@@ -99,7 +101,13 @@ function comparaListas(letra) {
     tentativas--;
     // errou apresenta a imagem na tela
     carregaImageForca();
-    // verificar se tem tentativas , apresentar msg na tela
+    if (tentativas == 0) {
+      abreModal(
+        "OPsss 👺",
+        "Perdeu 👎 Mizeraveeeeeee!!!! a palavra era </br> " +
+          palavraSecretaSorteada
+      );
+    }
   } else {
     for (i = 0; i < palavraSecretaSorteada.length; i++) {
       if (palavraSecretaSorteada[i] == letra) {
@@ -109,17 +117,19 @@ function comparaListas(letra) {
   }
 
   let vitoria = true;
+
   for (i = 0; i < palavraSecretaSorteada.length; i++) {
     if (palavraSecretaSorteada[i] != listaDinamica[i]) {
       vitoria = false;
     }
   }
   if (vitoria == true) {
-    //mensagem na tela
+    abreModal("🥇 PARABENS ! ", "YOU WIN 🏆");
     tentativas = 0;
   }
 }
 
+// funcao carregar imagem
 function carregaImageForca() {
   switch (tentativas) {
     case 5:
@@ -159,3 +169,20 @@ function carregaImageForca() {
       break;
   }
 }
+
+function abreModal(titulo, mensagem) {
+  let modalTitulo = document.getElementById("exampleModalLabel");
+  modalTitulo.innerText = titulo;
+
+  let modalBody = document.getElementById("modal-body");
+  modalBody.innerHTML = mensagem;
+  document.getElementById("modal-body").style.fontSize = "60px";
+  $("#myModal").modal({
+    show: true,
+  });
+}
+
+let btnReiniciar = document.querySelector("#btnReiniciar");
+btnReiniciar.addEventListener("click", function () {
+  location.reload();
+});
