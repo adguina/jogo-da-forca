@@ -22,8 +22,8 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 .sombra {
-  width: 390px;   /* aumente à vontade */
-  height: 400px;  /* aumente à vontade */
+  width: 390px; /* aumente à vontade */
+  height: 400px; /* aumente à vontade */
   background: black;
   position: relative;
   overflow: hidden;
@@ -48,13 +48,13 @@ body {
 
 #imagem {
   background-image: url("../img/forca.png");
-  width: 100%;      /* agora a imagem cresce junto */
-  height: 100%;     /* agora ocupa toda a sombra */
+  width: 100%; /* agora a imagem cresce junto */
+  height: 100%; /* agora ocupa toda a sombra */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   position: relative;
-  z-index: 2;        /* imagem acima da neblina */
+  z-index: 2; /* imagem acima da neblina */
 }
 
 #palavra-secreta {
@@ -70,6 +70,15 @@ body {
   width: 16px;
   text-align: center;
   border-bottom: 2px solid #00ff00;
+  color: #00ff00;
+  font: 600;
+  padding: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.letrasEspaco {
+  width: 16px;
+  text-align: center;
   color: #00ff00;
   font: 600;
   padding: 2px;
@@ -99,7 +108,7 @@ body {
   transform: scale(1.3);
 }
 
-#teclado .teclas button:disabled{
+#teclado .teclas button:disabled {
   cursor: not-allowed;
 }
 

@@ -1,8 +1,3 @@
-let palavraSecretaCategoria;
-let palavraSecretaSorteada;
-let listaDinamica = [];
-let tentativas = 6;
-
 const palavras = [
   (palavra001 = { nome: "AFEGANISTAO", categoria: "PAIS" }),
   (palavra002 = { nome: "AFRICA DO SUL", categoria: "PAIS" }),
@@ -252,58 +247,58 @@ const palavras = [
   (palavra246 = { nome: "NEW CALEDONIA", categoria: "PAIS" }),
   (palavra247 = { nome: "BRITISH INDIAN OCEAN TERRITORY", categoria: "PAIS" }),
   (palavra248 = { nome: "PUERTO RICO EUA", categoria: "PAIS" }),
-  // (palavra249 = { nome: "TERRITORIO EXTRA 1", categoria: "PAIS" }),
-  // (palavra250 = { nome: "TERRITORIO EXTRA 2", categoria: "PAIS" }),
-  // (palavra251 = { nome: "TERRITORIO EXTRA 3", categoria: "PAIS" }),
-  // (palavra252 = { nome: "TERRITORIO EXTRA 4", categoria: "PAIS" }),
-  // (palavra253 = { nome: "TERRITORIO EXTRA 5", categoria: "PAIS" }),
-  // (palavra254 = { nome: "TERRITORIO EXTRA 6", categoria: "PAIS" }),
-  // (palavra255 = { nome: "TERRITORIO EXTRA 7", categoria: "PAIS" }),
-  // (palavra256 = { nome: "TERRITORIO EXTRA 8", categoria: "PAIS" }),
-  // (palavra257 = { nome: "TERRITORIO EXTRA 9", categoria: "PAIS" }),
-  // (palavra258 = { nome: "TERRITORIO EXTRA 10", categoria: "PAIS" }),
-  // (palavra259 = { nome: "TERRITORIO EXTRA 11", categoria: "PAIS" }),
-  // (palavra260 = { nome: "TERRITORIO EXTRA 12", categoria: "PAIS" }),
-  // (palavra261 = { nome: "TERRITORIO EXTRA 13", categoria: "PAIS" }),
-  // (palavra262 = { nome: "TERRITORIO EXTRA 14", categoria: "PAIS" }),
-  // (palavra263 = { nome: "TERRITORIO EXTRA 15", categoria: "PAIS" }),
-  // (palavra264 = { nome: "TERRITORIO EXTRA 16", categoria: "PAIS" }),
-  // (palavra265 = { nome: "TERRITORIO EXTRA 17", categoria: "PAIS" }),
-  // (palavra266 = { nome: "TERRITORIO EXTRA 18", categoria: "PAIS" }),
-  // (palavra267 = { nome: "TERRITORIO EXTRA 19", categoria: "PAIS" }),
-  // (palavra268 = { nome: "TERRITORIO EXTRA 20", categoria: "PAIS" }),
-  // (palavra269 = { nome: "TERRITORIO EXTRA 21", categoria: "PAIS" }),
-  // (palavra270 = { nome: "TERRITORIO EXTRA 22", categoria: "PAIS" }),
-  // (palavra271 = { nome: "TERRITORIO EXTRA 23", categoria: "PAIS" }),
-  // (palavra272 = { nome: "TERRITORIO EXTRA 24", categoria: "PAIS" }),
-  // (palavra273 = { nome: "TERRITORIO EXTRA 25", categoria: "PAIS" }),
-  // (palavra274 = { nome: "TERRITORIO EXTRA 26", categoria: "PAIS" }),
-  // (palavra275 = { nome: "TERRITORIO EXTRA 27", categoria: "PAIS" }),
-  // (palavra276 = { nome: "TERRITORIO EXTRA 28", categoria: "PAIS" }),
-  // (palavra277 = { nome: "TERRITORIO EXTRA 29", categoria: "PAIS" }),
-  // (palavra278 = { nome: "TERRITORIO EXTRA 30", categoria: "PAIS" }),
-  // (palavra279 = { nome: "TERRITORIO EXTRA 31", categoria: "PAIS" }),
-  // (palavra280 = { nome: "TERRITORIO EXTRA 32", categoria: "PAIS" }),
-  // (palavra281 = { nome: "TERRITORIO EXTRA 33", categoria: "PAIS" }),
-  // (palavra282 = { nome: "TERRITORIO EXTRA 34", categoria: "PAIS" }),
-  // (palavra283 = { nome: "TERRITORIO EXTRA 35", categoria: "PAIS" }),
-  // (palavra284 = { nome: "TERRITORIO EXTRA 36", categoria: "PAIS" }),
-  // (palavra285 = { nome: "TERRITORIO EXTRA 37", categoria: "PAIS" }),
-  // (palavra286 = { nome: "TERRITORIO EXTRA 38", categoria: "PAIS" }),
-  // (palavra287 = { nome: "TERRITORIO EXTRA 39", categoria: "PAIS" }),
-  // (palavra288 = { nome: "TERRITORIO EXTRA 40", categoria: "PAIS" }),
-  // (palavra289 = { nome: "TERRITORIO EXTRA 41", categoria: "PAIS" }),
-  // (palavra290 = { nome: "TERRITORIO EXTRA 42", categoria: "PAIS" }),
-  // (palavra291 = { nome: "TERRITORIO EXTRA 43", categoria: "PAIS" }),
-  // (palavra292 = { nome: "TERRITORIO EXTRA 44", categoria: "PAIS" }),
-  // (palavra293 = { nome: "TERRITORIO EXTRA 45", categoria: "PAIS" }),
-  // (palavra294 = { nome: "TERRITORIO EXTRA 46", categoria: "PAIS" }),
-  // (palavra295 = { nome: "TERRITORIO EXTRA 47", categoria: "PAIS" }),
-  // (palavra296 = { nome: "TERRITORIO EXTRA 48", categoria: "PAIS" }),
-  // (palavra297 = { nome: "TERRITORIO EXTRA 49", categoria: "PAIS" }),
-  // (palavra298 = { nome: "TERRITORIO EXTRA 50", categoria: "PAIS" }),
-  // (palavra299 = { nome: "TERRITORIO EXTRA 51", categoria: "PAIS" }),
-  // (palavra300 = { nome: "TERRITORIO EXTRA 52", categoria: "PAIS" }),
+  (palavra249 = { nome: "TERRITORIO EXTRA 1", categoria: "PAIS" }),
+  (palavra250 = { nome: "TERRITORIO EXTRA 2", categoria: "PAIS" }),
+  (palavra251 = { nome: "TERRITORIO EXTRA 3", categoria: "PAIS" }),
+  (palavra252 = { nome: "TERRITORIO EXTRA 4", categoria: "PAIS" }),
+  (palavra253 = { nome: "TERRITORIO EXTRA 5", categoria: "PAIS" }),
+  (palavra254 = { nome: "TERRITORIO EXTRA 6", categoria: "PAIS" }),
+  (palavra255 = { nome: "TERRITORIO EXTRA 7", categoria: "PAIS" }),
+  (palavra256 = { nome: "TERRITORIO EXTRA 8", categoria: "PAIS" }),
+  (palavra257 = { nome: "TERRITORIO EXTRA 9", categoria: "PAIS" }),
+  (palavra258 = { nome: "TERRITORIO EXTRA 10", categoria: "PAIS" }),
+  (palavra259 = { nome: "TERRITORIO EXTRA 11", categoria: "PAIS" }),
+  (palavra260 = { nome: "TERRITORIO EXTRA 12", categoria: "PAIS" }),
+  (palavra261 = { nome: "TERRITORIO EXTRA 13", categoria: "PAIS" }),
+  (palavra262 = { nome: "TERRITORIO EXTRA 14", categoria: "PAIS" }),
+  (palavra263 = { nome: "TERRITORIO EXTRA 15", categoria: "PAIS" }),
+  (palavra264 = { nome: "TERRITORIO EXTRA 16", categoria: "PAIS" }),
+  (palavra265 = { nome: "TERRITORIO EXTRA 17", categoria: "PAIS" }),
+  (palavra266 = { nome: "TERRITORIO EXTRA 18", categoria: "PAIS" }),
+  (palavra267 = { nome: "TERRITORIO EXTRA 19", categoria: "PAIS" }),
+  (palavra268 = { nome: "TERRITORIO EXTRA 20", categoria: "PAIS" }),
+  (palavra269 = { nome: "TERRITORIO EXTRA 21", categoria: "PAIS" }),
+  (palavra270 = { nome: "TERRITORIO EXTRA 22", categoria: "PAIS" }),
+  (palavra271 = { nome: "TERRITORIO EXTRA 23", categoria: "PAIS" }),
+  (palavra272 = { nome: "TERRITORIO EXTRA 24", categoria: "PAIS" }),
+  (palavra273 = { nome: "TERRITORIO EXTRA 25", categoria: "PAIS" }),
+  (palavra274 = { nome: "TERRITORIO EXTRA 26", categoria: "PAIS" }),
+  (palavra275 = { nome: "TERRITORIO EXTRA 27", categoria: "PAIS" }),
+  (palavra276 = { nome: "TERRITORIO EXTRA 28", categoria: "PAIS" }),
+  (palavra277 = { nome: "TERRITORIO EXTRA 29", categoria: "PAIS" }),
+  (palavra278 = { nome: "TERRITORIO EXTRA 30", categoria: "PAIS" }),
+  (palavra279 = { nome: "TERRITORIO EXTRA 31", categoria: "PAIS" }),
+  (palavra280 = { nome: "TERRITORIO EXTRA 32", categoria: "PAIS" }),
+  (palavra281 = { nome: "TERRITORIO EXTRA 33", categoria: "PAIS" }),
+  (palavra282 = { nome: "TERRITORIO EXTRA 34", categoria: "PAIS" }),
+  (palavra283 = { nome: "TERRITORIO EXTRA 35", categoria: "PAIS" }),
+  (palavra284 = { nome: "TERRITORIO EXTRA 36", categoria: "PAIS" }),
+  (palavra285 = { nome: "TERRITORIO EXTRA 37", categoria: "PAIS" }),
+  (palavra286 = { nome: "TERRITORIO EXTRA 38", categoria: "PAIS" }),
+  (palavra287 = { nome: "TERRITORIO EXTRA 39", categoria: "PAIS" }),
+  (palavra288 = { nome: "TERRITORIO EXTRA 40", categoria: "PAIS" }),
+  (palavra289 = { nome: "TERRITORIO EXTRA 41", categoria: "PAIS" }),
+  (palavra290 = { nome: "TERRITORIO EXTRA 42", categoria: "PAIS" }),
+  (palavra291 = { nome: "TERRITORIO EXTRA 43", categoria: "PAIS" }),
+  (palavra292 = { nome: "TERRITORIO EXTRA 44", categoria: "PAIS" }),
+  (palavra293 = { nome: "TERRITORIO EXTRA 45", categoria: "PAIS" }),
+  (palavra294 = { nome: "TERRITORIO EXTRA 46", categoria: "PAIS" }),
+  (palavra295 = { nome: "TERRITORIO EXTRA 47", categoria: "PAIS" }),
+  (palavra296 = { nome: "TERRITORIO EXTRA 48", categoria: "PAIS" }),
+  (palavra297 = { nome: "TERRITORIO EXTRA 49", categoria: "PAIS" }),
+  (palavra298 = { nome: "TERRITORIO EXTRA 50", categoria: "PAIS" }),
+  (palavra299 = { nome: "TERRITORIO EXTRA 51", categoria: "PAIS" }),
+  (palavra300 = { nome: "TERRITORIO EXTRA 52", categoria: "PAIS" }),
    (palavra301 = { nome: "NOVA YORK", categoria: "CIDADE" }),
   (palavra302 = { nome: "LOS ANGELES", categoria: "CIDADE" }),
   (palavra303 = { nome: "CHICAGO", categoria: "CIDADE" }),
@@ -574,36 +569,36 @@ const palavras = [
   (palavra568 = { nome: "OUJDA", categoria: "CIDADE" }),
   (palavra569 = { nome: "SAFI", categoria: "CIDADE" }),
   (palavra570 = { nome: "KENITRA", categoria: "CIDADE" }),
-  // (palavra571 = { nome: "CIDADEEXTRA271", categoria: "CIDADE" }),
-  // (palavra572 = { nome: "CIDADEEXTRA272", categoria: "CIDADE" }),
-  // (palavra573 = { nome: "CIDADEEXTRA273", categoria: "CIDADE" }),
-  // (palavra574 = { nome: "CIDADEEXTRA274", categoria: "CIDADE" }),
-  // (palavra575 = { nome: "CIDADEEXTRA275", categoria: "CIDADE" }),
-  // (palavra576 = { nome: "CIDADEEXTRA276", categoria: "CIDADE" }),
-  // (palavra577 = { nome: "CIDADEEXTRA277", categoria: "CIDADE" }),
-  // (palavra578 = { nome: "CIDADEEXTRA278", categoria: "CIDADE" }),
-  // (palavra579 = { nome: "CIDADEEXTRA279", categoria: "CIDADE" }),
-  // (palavra580 = { nome: "CIDADEEXTRA280", categoria: "CIDADE" }),
-  // (palavra581 = { nome: "CIDADEEXTRA281", categoria: "CIDADE" }),
-  // (palavra582 = { nome: "CIDADEEXTRA282", categoria: "CIDADE" }),
-  // (palavra583 = { nome: "CIDADEEXTRA283", categoria: "CIDADE" }),
-  // (palavra584 = { nome: "CIDADEEXTRA284", categoria: "CIDADE" }),
-  // (palavra585 = { nome: "CIDADEEXTRA285", categoria: "CIDADE" }),
-  // (palavra586 = { nome: "CIDADEEXTRA286", categoria: "CIDADE" }),
-  // (palavra587 = { nome: "CIDADEEXTRA287", categoria: "CIDADE" }),
-  // (palavra588 = { nome: "CIDADEEXTRA288", categoria: "CIDADE" }),
-  // (palavra589 = { nome: "CIDADEEXTRA289", categoria: "CIDADE" }),
-  // (palavra590 = { nome: "CIDADEEXTRA290", categoria: "CIDADE" }),
-  // (palavra591 = { nome: "CIDADEEXTRA291", categoria: "CIDADE" }),
-  // (palavra592 = { nome: "CIDADEEXTRA292", categoria: "CIDADE" }),
-  // (palavra593 = { nome: "CIDADEEXTRA293", categoria: "CIDADE" }),
-  // (palavra594 = { nome: "CIDADEEXTRA294", categoria: "CIDADE" }),
-  // (palavra595 = { nome: "CIDADEEXTRA295", categoria: "CIDADE" }),
-  // (palavra596 = { nome: "CIDADEEXTRA296", categoria: "CIDADE" }),
-  // (palavra597 = { nome: "CIDADEEXTRA297", categoria: "CIDADE" }),
-  // (palavra598 = { nome: "CIDADEEXTRA298", categoria: "CIDADE" }),
-  // (palavra599 = { nome: "CIDADEEXTRA299", categoria: "CIDADE" }),
-  // (palavra600 = { nome: "CIDADEEXTRA300", categoria: "CIDADE" }),
+  (palavra571 = { nome: "CIDADEEXTRA271", categoria: "CIDADE" }),
+  (palavra572 = { nome: "CIDADEEXTRA272", categoria: "CIDADE" }),
+  (palavra573 = { nome: "CIDADEEXTRA273", categoria: "CIDADE" }),
+  (palavra574 = { nome: "CIDADEEXTRA274", categoria: "CIDADE" }),
+  (palavra575 = { nome: "CIDADEEXTRA275", categoria: "CIDADE" }),
+  (palavra576 = { nome: "CIDADEEXTRA276", categoria: "CIDADE" }),
+  (palavra577 = { nome: "CIDADEEXTRA277", categoria: "CIDADE" }),
+  (palavra578 = { nome: "CIDADEEXTRA278", categoria: "CIDADE" }),
+  (palavra579 = { nome: "CIDADEEXTRA279", categoria: "CIDADE" }),
+  (palavra580 = { nome: "CIDADEEXTRA280", categoria: "CIDADE" }),
+  (palavra581 = { nome: "CIDADEEXTRA281", categoria: "CIDADE" }),
+  (palavra582 = { nome: "CIDADEEXTRA282", categoria: "CIDADE" }),
+  (palavra583 = { nome: "CIDADEEXTRA283", categoria: "CIDADE" }),
+  (palavra584 = { nome: "CIDADEEXTRA284", categoria: "CIDADE" }),
+  (palavra585 = { nome: "CIDADEEXTRA285", categoria: "CIDADE" }),
+  (palavra586 = { nome: "CIDADEEXTRA286", categoria: "CIDADE" }),
+  (palavra587 = { nome: "CIDADEEXTRA287", categoria: "CIDADE" }),
+  (palavra588 = { nome: "CIDADEEXTRA288", categoria: "CIDADE" }),
+  (palavra589 = { nome: "CIDADEEXTRA289", categoria: "CIDADE" }),
+  (palavra590 = { nome: "CIDADEEXTRA290", categoria: "CIDADE" }),
+  (palavra591 = { nome: "CIDADEEXTRA291", categoria: "CIDADE" }),
+  (palavra592 = { nome: "CIDADEEXTRA292", categoria: "CIDADE" }),
+  (palavra593 = { nome: "CIDADEEXTRA293", categoria: "CIDADE" }),
+  (palavra594 = { nome: "CIDADEEXTRA294", categoria: "CIDADE" }),
+  (palavra595 = { nome: "CIDADEEXTRA295", categoria: "CIDADE" }),
+  (palavra596 = { nome: "CIDADEEXTRA296", categoria: "CIDADE" }),
+  (palavra597 = { nome: "CIDADEEXTRA297", categoria: "CIDADE" }),
+  (palavra598 = { nome: "CIDADEEXTRA298", categoria: "CIDADE" }),
+  (palavra599 = { nome: "CIDADEEXTRA299", categoria: "CIDADE" }),
+  (palavra600 = { nome: "CIDADEEXTRA300", categoria: "CIDADE" }),
   (palavra601 = { nome: "O PODEROSO CHEFAO", categoria: "FILMES" }),
   (palavra602 = { nome: "TITANIC", categoria: "FILMES" }),
   (palavra603 = { nome: "FORREST GUMP", categoria: "FILMES" }),
@@ -964,209 +959,44 @@ const palavras = [
   (palavra958 = { nome: "THE LAST SAMURAI", categoria: "FILMES" }),
   (palavra959 = { nome: "SAVING PRIVATE RYAN", categoria: "FILMES" }),
   (palavra960 = { nome: "THE UNTOLD STORY", categoria: "FILMES" }),
-  (palavra961 = { nome: "THE BARBER", categoria: "FILMES" })
-  // (palavra962 = { nome: "FILME EXTRA 1", categoria: "FILMES" }),
-  // (palavra963 = { nome: "FILME EXTRA 2", categoria: "FILMES" }),
-  // (palavra964 = { nome: "FILME EXTRA 3", categoria: "FILMES" }),
-  // (palavra965 = { nome: "FILME EXTRA 4", categoria: "FILMES" }),
-  // (palavra966 = { nome: "FILME EXTRA 5", categoria: "FILMES" }),
-  // (palavra967 = { nome: "FILME EXTRA 6", categoria: "FILMES" }),
-  // (palavra968 = { nome: "FILME EXTRA 7", categoria: "FILMES" }),
-  // (palavra969 = { nome: "FILME EXTRA 8", categoria: "FILMES" }),
-  // (palavra970 = { nome: "FILME EXTRA 9", categoria: "FILMES" }),
-  // (palavra971 = { nome: "FILME EXTRA 10", categoria: "FILMES" }),
-  // (palavra972 = { nome: "FILME EXTRA 11", categoria: "FILMES" }),
-  // (palavra973 = { nome: "FILME EXTRA 12", categoria: "FILMES" }),
-  // (palavra974 = { nome: "FILME EXTRA 13", categoria: "FILMES" }),
-  // (palavra975 = { nome: "FILME EXTRA 14", categoria: "FILMES" }),
-  // (palavra976 = { nome: "FILME EXTRA 15", categoria: "FILMES" }),
-  // (palavra977 = { nome: "FILME EXTRA 16", categoria: "FILMES" }),
-  // (palavra978 = { nome: "FILME EXTRA 17", categoria: "FILMES" }),
-  // (palavra979 = { nome: "FILME EXTRA 18", categoria: "FILMES" }),
-  // (palavra980 = { nome: "FILME EXTRA 19", categoria: "FILMES" }),
-  // (palavra981 = { nome: "FILME EXTRA 20", categoria: "FILMES" }),
-  // (palavra982 = { nome: "FILME EXTRA 21", categoria: "FILMES" }),
-  // (palavra983 = { nome: "FILME EXTRA 22", categoria: "FILMES" }),
-  // (palavra984 = { nome: "FILME EXTRA 23", categoria: "FILMES" }),
-  // (palavra985 = { nome: "FILME EXTRA 24", categoria: "FILMES" }),
-  // (palavra986 = { nome: "FILME EXTRA 25", categoria: "FILMES" }),
-  // (palavra987 = { nome: "FILME EXTRA 26", categoria: "FILMES" }),
-  // (palavra988 = { nome: "FILME EXTRA 27", categoria: "FILMES" }),
-  // (palavra989 = { nome: "FILME EXTRA 28", categoria: "FILMES" }),
-  // (palavra990 = { nome: "FILME EXTRA 29", categoria: "FILMES" }),
-  // (palavra991 = { nome: "FILME EXTRA 30", categoria: "FILMES" }),
-  // (palavra992 = { nome: "FILME EXTRA 31", categoria: "FILMES" }),
-  // (palavra993 = { nome: "FILME EXTRA 32", categoria: "FILMES" }),
-  // (palavra994 = { nome: "FILME EXTRA 33", categoria: "FILMES" }),
-  // (palavra995 = { nome: "FILME EXTRA 34", categoria: "FILMES" }),
-  // (palavra996 = { nome: "FILME EXTRA 35", categoria: "FILMES" }),
-  // (palavra997 = { nome: "FILME EXTRA 36", categoria: "FILMES" }),
-  // (palavra998 = { nome: "FILME EXTRA 37", categoria: "FILMES" }),
-  // (palavra999 = { nome: "FILME EXTRA 38", categoria: "FILMES" }),
-  // (palavra1000 = { nome: "FILME EXTRA 39", categoria: "FILMES" })
+  (palavra961 = { nome: "THE BARBER", categoria: "FILMES" }),
+  (palavra962 = { nome: "FILME EXTRA 1", categoria: "FILMES" }),
+  (palavra963 = { nome: "FILME EXTRA 2", categoria: "FILMES" }),
+  (palavra964 = { nome: "FILME EXTRA 3", categoria: "FILMES" }),
+  (palavra965 = { nome: "FILME EXTRA 4", categoria: "FILMES" }),
+  (palavra966 = { nome: "FILME EXTRA 5", categoria: "FILMES" }),
+  (palavra967 = { nome: "FILME EXTRA 6", categoria: "FILMES" }),
+  (palavra968 = { nome: "FILME EXTRA 7", categoria: "FILMES" }),
+  (palavra969 = { nome: "FILME EXTRA 8", categoria: "FILMES" }),
+  (palavra970 = { nome: "FILME EXTRA 9", categoria: "FILMES" }),
+  (palavra971 = { nome: "FILME EXTRA 10", categoria: "FILMES" }),
+  (palavra972 = { nome: "FILME EXTRA 11", categoria: "FILMES" }),
+  (palavra973 = { nome: "FILME EXTRA 12", categoria: "FILMES" }),
+  (palavra974 = { nome: "FILME EXTRA 13", categoria: "FILMES" }),
+  (palavra975 = { nome: "FILME EXTRA 14", categoria: "FILMES" }),
+  (palavra976 = { nome: "FILME EXTRA 15", categoria: "FILMES" }),
+  (palavra977 = { nome: "FILME EXTRA 16", categoria: "FILMES" }),
+  (palavra978 = { nome: "FILME EXTRA 17", categoria: "FILMES" }),
+  (palavra979 = { nome: "FILME EXTRA 18", categoria: "FILMES" }),
+  (palavra980 = { nome: "FILME EXTRA 19", categoria: "FILMES" }),
+  (palavra981 = { nome: "FILME EXTRA 20", categoria: "FILMES" }),
+  (palavra982 = { nome: "FILME EXTRA 21", categoria: "FILMES" }),
+  (palavra983 = { nome: "FILME EXTRA 22", categoria: "FILMES" }),
+  (palavra984 = { nome: "FILME EXTRA 23", categoria: "FILMES" }),
+  (palavra985 = { nome: "FILME EXTRA 24", categoria: "FILMES" }),
+  (palavra986 = { nome: "FILME EXTRA 25", categoria: "FILMES" }),
+  (palavra987 = { nome: "FILME EXTRA 26", categoria: "FILMES" }),
+  (palavra988 = { nome: "FILME EXTRA 27", categoria: "FILMES" }),
+  (palavra989 = { nome: "FILME EXTRA 28", categoria: "FILMES" }),
+  (palavra990 = { nome: "FILME EXTRA 29", categoria: "FILMES" }),
+  (palavra991 = { nome: "FILME EXTRA 30", categoria: "FILMES" }),
+  (palavra992 = { nome: "FILME EXTRA 31", categoria: "FILMES" }),
+  (palavra993 = { nome: "FILME EXTRA 32", categoria: "FILMES" }),
+  (palavra994 = { nome: "FILME EXTRA 33", categoria: "FILMES" }),
+  (palavra995 = { nome: "FILME EXTRA 34", categoria: "FILMES" }),
+  (palavra996 = { nome: "FILME EXTRA 35", categoria: "FILMES" }),
+  (palavra997 = { nome: "FILME EXTRA 36", categoria: "FILMES" }),
+  (palavra998 = { nome: "FILME EXTRA 37", categoria: "FILMES" }),
+  (palavra999 = { nome: "FILME EXTRA 38", categoria: "FILMES" }),
+  (palavra1000 = { nome: "FILME EXTRA 39", categoria: "FILMES" })
 ];
-
-criarPalavraSecreta();
-
-function criarPalavraSecreta() {
-  const indexPalavra = parseInt(Math.random() * palavras.length); //multiplica pelo tamanho da lista
-
-  palavraSecretaSorteada = palavras[indexPalavra].nome;
-  palavraSecretaCategoria = palavras[indexPalavra].categoria;
-
-  // console.log(indexPalavra);
-}
-
-montarPalavraTela();
-
-function montarPalavraTela() {
-  const categoria = document.getElementById("categoria");
-  categoria.innerHTML = palavraSecretaCategoria;
-
-  const palavraTela = document.getElementById("palavra-secreta");
-  palavraTela.innerHTML = "";
-
-  for (i = 0; i < palavraSecretaSorteada.length; i++) {
-    if (listaDinamica[i] == undefined) {
-      if ((palavraSecretaSorteada[i] == " ")) {
-        listaDinamica[i] = " ";
-        palavraTela.innerHTML =
-          palavraTela.innerHTML +
-          "<div class='letrasEspaco'>" +
-          listaDinamica[i] +
-          "</div>";
-      } else {
-        listaDinamica[i] = "&nbsp;";
-        palavraTela.innerHTML =
-          palavraTela.innerHTML +
-          "<div class='letras'>" +
-          listaDinamica[i] +
-          "</div>";
-      }
-    } else {
-      if ((palavraSecretaSorteada[i] == " ")) {
-        listaDinamica[i] = " ";
-        palavraTela.innerHTML =
-          palavraTela.innerHTML +
-          "<div class='letrasEspaco'>" +
-          listaDinamica[i] +
-          "</div>";
-      } else {
-        palavraTela.innerHTML =
-          palavraTela.innerHTML +
-          "<div class='letras'>" +
-          listaDinamica[i] +
-          "</div>";
-      }
-    }
-  }
-}
-
-// muda a cor das letras escolhidas
-function verificaLetraEscolhida(letra) {
-  document.getElementById("tecla-" + letra).disabled = true;
-
-  if (tentativas > 0) {
-    mudarStyleLetra("tecla-" + letra);
-    comparaListas(letra);
-    montarPalavraTela();
-  }
-}
-
-function mudarStyleLetra(tecla) {
-  document.getElementById(tecla).style.background = "#1C1C1C";
-  document.getElementById(tecla).style.color = "#fffafa";
-  document.getElementById(tecla).style.border = " 3px solid #FF0000";
-}
-
-function comparaListas(letra) {
-  const pos = palavraSecretaSorteada.indexOf(letra);
-  if (pos < 0) {
-    tentativas--;
-    // errou apresenta a imagem na tela
-    carregaImageForca();
-    if (tentativas == 0) {
-      abreModal(
-        "OPsss 👺",
-        "Perdeu 👎 Mizeraveeeeeee!!!! a palavra era </br> " +
-          palavraSecretaSorteada
-      );
-    }
-  } else {
-    for (i = 0; i < palavraSecretaSorteada.length; i++) {
-      if (palavraSecretaSorteada[i] == letra) {
-        listaDinamica[i] = letra;
-      }
-    }
-  }
-
-  let vitoria = true;
-
-  for (i = 0; i < palavraSecretaSorteada.length; i++) {
-    if (palavraSecretaSorteada[i] != listaDinamica[i]) {
-      vitoria = false;
-    }
-  }
-  if (vitoria == true) {
-    abreModal("🥇 PARABENS ! ", "YOU WIN 🏆");
-    tentativas = 0;
-  }
-}
-
-// funcao carregar imagem
-function carregaImageForca() {
-  switch (tentativas) {
-    case 5:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca01.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    case 4:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca02.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    case 3:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca03.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    case 2:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca04.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    case 1:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca05.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    case 0:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca07.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-    default:
-      document.getElementById("imagem").style.background =
-        "url('./img/forca.png')";
-      document.getElementById("imagem").style.backgroundRepeat = "no-repeat";
-      break;
-  }
-}
-
-function abreModal(titulo, mensagem) {
-  let modalTitulo = document.getElementById("exampleModalLabel");
-  modalTitulo.innerText = titulo;
-
-  let modalBody = document.getElementById("modal-body");
-  modalBody.innerHTML = mensagem;
-  document.getElementById("modal-body").style.fontSize = "60px";
-  $("#myModal").modal({
-    show: true,
-  });
-}
-
-let btnReiniciar = document.querySelector("#btnReiniciar");
-btnReiniciar.addEventListener("click", function () {
-  location.reload();
-});
